@@ -29,7 +29,6 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.ai:spring-ai-starter-model-openai")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
-	runtimeOnly("com.mysql:mysql-connector-j")
 	runtimeOnly("org.postgresql:postgresql")
 	developmentOnly("org.springframework.ai:spring-ai-spring-boot-docker-compose")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -37,7 +36,6 @@ dependencies {
 	testImplementation("org.springframework.ai:spring-ai-spring-boot-testcontainers")
 	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("org.testcontainers:junit-jupiter")
-	testImplementation("org.testcontainers:mysql")
 	testImplementation("org.testcontainers:postgresql")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
