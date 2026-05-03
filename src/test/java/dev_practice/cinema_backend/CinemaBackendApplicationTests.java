@@ -28,7 +28,10 @@ class CinemaBackendApplicationTests {
 	@Test
 	@Rollback(value = false)
 	void createUser(){
-		User user = new User("Rajan");
+		User user = User.builder()
+				.name("Admin")
+				.lastname("Test")
+				.password("Admin123").build();
 		userRepository.save(user);
 		logger.info("User: {}", user);
 	}

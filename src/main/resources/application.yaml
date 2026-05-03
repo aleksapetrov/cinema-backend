@@ -1,9 +1,4 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/cinema_backend
-    username: postgres
-    password: rajan123
-    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
@@ -19,3 +14,7 @@ spring:
   ai:
     openai:
       api-key: ${OPENAI_API_KEY:default_key}
+
+app:
+  jwtSecret: "vTq9zKpL4mXr7Qw2Nd8HsF6UaYcE1JgP5bR3ZxC0uMiDoWlA9BnSfGhKt"
+  jwtExpirationMs: 3600000

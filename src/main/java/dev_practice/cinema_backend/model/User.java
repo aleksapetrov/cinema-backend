@@ -11,7 +11,9 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Builder
 @ToString
 public class User {
 
@@ -22,15 +24,20 @@ public class User {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "lastname")
+    private String lastname;
 
+    @Column(name = "username")
+    private String username;
+
+    @Column(name = "password")
+    private String password;
 
     @ManyToMany
     @JoinTable(name = "user_roles",
     joinColumns = @JoinColumn(name = "user_id"),
     inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @Builder.Default
     private Set<Role> roles = new HashSet<>();
 
-    public User(String name) {
-        this.name = name;
-    }
 }
